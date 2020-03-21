@@ -10,31 +10,6 @@ import (
 )
 
 func main() {
-	// p1 := NewProduct("Adam's Peanut Butter")
-	// s := NewSite("Amazon", "https://smile.amazon.com/Adams-Natural-CRUNCHY-PEANUT-BUTTER/dp/B00K25O2EI/")
-	// _ = p1.AddSite(s)
-
-	// p2 := NewProduct("Clorox Disinfecting Wipes Lemon")
-	// s = NewSite("Staples", "https://www.staples.com/Clorox-Disinfecting-Wipes-Lemon-Fresh-75-Count-Canister/product_616321")
-	// _ = p2.AddSite(s)
-	// s = NewSite("Costco", "https://www.costco.com/clorox-disinfecting-wipes%2c-variety-pack%2c-85-count%2c-5-pack.product.100534416.html")
-	// _ = p2.AddSite(s)
-	// s = NewSite("Amazon", "https://smile.amazon.com/Clorox-Disinfecting-Wipes-Bleach-Cleaning/dp/B00HSC9F2C/")
-	// _ = p2.AddSite(s)
-
-	// j1, err := json.Marshal(p1)
-	// if err != nil {
-	// 	msg := fmt.Sprintf("p1 json.Marshal err: %v", err)
-	// 	panic(msg)
-	// }
-	// log.Printf("p1: %s\n", string(j1))
-
-	// j2, err := json.Marshal(p2)
-	// if err != nil {
-	// 	msg := fmt.Sprintf("p2 json.Marshal err: %v", err)
-	// 	panic(msg)
-	// }
-	// log.Printf("p2: %s\n", string(j2))
 
 	pj := "./products.json"
 	b, err := ioutil.ReadFile(pj)
@@ -98,3 +73,31 @@ func scrape(s Site) error {
 
 	return nil
 }
+
+// func initProductJSON() {
+// 	p1 := NewProduct("Adam's Peanut Butter")
+// 	s := NewSite("Amazon", "https://smile.amazon.com/Adams-Natural-CRUNCHY-PEANUT-BUTTER/dp/B00K25O2EI/")
+// 	_ = p1.AddSite(s)
+
+// 	p2 := NewProduct("Clorox Disinfecting Wipes Lemon")
+// 	s = NewSite("Staples", "https://www.staples.com/Clorox-Disinfecting-Wipes-Lemon-Fresh-75-Count-Canister/product_616321")
+// 	_ = p2.AddSite(s)
+// 	s = NewSite("Costco", "https://www.costco.com/clorox-disinfecting-wipes%2c-variety-pack%2c-85-count%2c-5-pack.product.100534416.html")
+// 	_ = p2.AddSite(s)
+// 	s = NewSite("Amazon", "https://smile.amazon.com/Clorox-Disinfecting-Wipes-Bleach-Cleaning/dp/B00HSC9F2C/")
+// 	_ = p2.AddSite(s)
+
+// 	j1, err := json.Marshal(p1)
+// 	if err != nil {
+// 		msg := fmt.Sprintf("p1 json.Marshal err: %v", err)
+// 		panic(msg)
+// 	}
+// 	log.Printf("p1: %s\n", string(j1))
+
+// 	j2, err := json.Marshal(p2)
+// 	if err != nil {
+// 		msg := fmt.Sprintf("p2 json.Marshal err: %v", err)
+// 		panic(msg)
+// 	}
+// 	log.Printf("p2: %s\n", string(j2))
+// }
