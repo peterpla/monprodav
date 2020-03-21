@@ -1,2 +1,40 @@
+[{
+    "name":"Adam's Peanut Butter",
+    "id":"561721e2-1881-4a23-a242-ff6dbeda9e47",
+    "sites":[{
+        "name":"Amazon",
+        "id":"c0244db3-7d71-4825-829f-abf1c682df44",
+        "url":"https://smile.amazon.com/Adams-Natural-CRUNCHY-PEANUT-BUTTER/dp/B00K25O2EI/",
+        "body":"",
+        "qty":0,
+        "units":"",
+        "price":0,
+        "product":null
+    }]
+},
 {
-}
+    "name":"Clorox Disinfecting Wipes Lemon",
+    "id":"8696b81a-21e6-4f97-8c31-c542435365cb",
+    "sites":[
+        {
+            "name":"Staples",
+            "id":"40ffe172-a722-4e2f-886e-788c07123a24",
+            "url":"https://www.staples.com/Clorox-Disinfecting-Wipes-Lemon-Fresh-75-Count-Canister/product_616321",
+            "body":"",
+            "qty":0,
+            "units":"",
+            "price":0,
+            "product":null
+        },
+        {
+            "name":"Costco",
+            "id":"9fd7b78b-95e3-4ded-8a86-cce1a0240658",
+            "url":"https://www.costco.com/clorox-disinfecting-wipes%2c-variety-pack%2c-85-count%2c-5-pack.product.100534416.html","body":"","qty":0,"units":"","price":0,"product":null},{"name":"Amazon","id":"67125a45-8093-45b5-9593-0202941cf02f","url":"https://smile.amazon.com/Clorox-Disinfecting-Wipes-Bleach-Cleaning/dp/B00HSC9F2C/",
+            "body":"",
+            "qty":0,
+            "units":"",
+            "price":0,
+            "product":null
+        }
+    ]
+}]

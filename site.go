@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 
 	"github.com/google/uuid"
 )
@@ -12,16 +13,26 @@ type Site struct {
 	ID       uuid.UUID `json:"id"`      // unique ID for this Site
 	URL      string    `json:"url"`     // this site's URL for product
 	Body     string    `json:"body"`    // HTML body returned for URL
-	Quantity float32   `json:"qty"`     // product Quantity for URL
+	Quantity float32   `json:"qty"`     // product Quantity (in Units) for URL
+	Units    string    `json:"units"`   // units of measure, e.g., ounce, pound, count
 	Price    float32   `json:"price"`   // product Price for URL
 	Product  *Product  `json:"product"` // reference to product
 }
 
 // NewSite creates a new Site structure
-func NewSite(name string) *Site {
-	return &Site{
+func NewSite(name string, url string) *Site {
+	s := &Site{
 		Name: name,
+		URL:  url,
 	}
+	s.ID = uuid.New()
+	log.Printf("NewSite: %+v\n", *s)
+	return s
+}
+
+func (s *Site) AddProduct(p *Product) error {
+	s.Product = p
+	return nil
 }
 
 // InStock dispatches to the site-specific InStock method
